@@ -1,0 +1,147 @@
+header {
+    width: 100%;
+    font-family: Verdana,
+        Geneva,
+        Tahoma,
+        sans-serif
+}
+
+header h2 {
+    width: 50%;
+    text-align: center;
+    margin: 20px auto;
+}
+
+main {
+    width: 100%;
+}
+
+.alert {
+    font-size: 12px;
+    font-weight: bold;
+    padding: 20px;
+    background-color: red;
+    color: white;
+    margin-bottom: 15px;
+}
+
+/* Add padding to containers */
+.container {
+    background-color: read;
+    width: 600px;
+    margin: 0 auto;
+}
+
+/* Bordered form */
+form {
+    border: 3px solid #f1f1f1;
+    padding: 5px;
+}
+
+/* Full-width inputs */
+input[type=text] {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+}
+
+/* Set a style for all buttons */
+button {
+    color: white;
+    padding: 14px;
+    margin: 2px;
+    border: none;
+    cursor: pointer;
+}
+
+/* Add a hover effect for buttons */
+button:hover {
+    opacity: 0.8;
+}
+
+
+/* Add padding to containers buttons */
+.containerbtn {
+    margin-top: 15px;
+    width: 100%;
+}
+
+.containerbtn .buscarbtn {
+    background-color: #04AA6D;
+    width: 49%;
+}
+
+/* Extra style for the cancel button (red) */
+.containerbtn .cancelbtn {
+    background-color: #f44336;
+    float: right;
+    width: 49%;
+}
+
+.containerbtn button {
+    font-weight: bold;
+}
+
+/** ==// table \\== */
+.table {
+    display: flex;
+    padding-top: 3px;
+    flex-direction: column;
+    border: 1px solid #ccc;
+    background: #fff;
+}
+
+.table thead {
+    color: #fff;
+    background: blue;
+}
+
+.table thead tr,
+.table tbody tr {
+    display: flex;
+}
+
+.table tbody tr {
+    border-top: 1px solid #ccc;
+}
+
+.table thead tr th,
+.table tbody tr td {
+    font-size: 12px;
+    display: flex;
+    flex: 1;
+    padding: .5em;
+}
+
+/* Change styles for responsive */
+@media screen and (max-width: 695px) {
+    .header {
+        width: 100%;
+    }
+
+    .container,
+    .containerbtn {
+        width: 100%;
+    }
+
+    .containerbtn .buscarbtn {
+        display: block;
+        float: none;
+        width: 100%;
+    }
+
+    .containerbtn .cancelbtn {
+        display: block;
+        float: none;
+        width: 100%;
+    }
+
+    .table {
+        width: 100%;
+        overflow: auto;
+    }
+
+}
