@@ -12,9 +12,10 @@ $(function () {
             dataType: 'JSON',
             data: ths.serialize(),
             beforeSend: function () {
-                $('html').find('')
+                $('html').find('.buscarbtn').prop("disable", true).text('Aguarde...');
             },
             complete: function (xhr) {
+                $('html').find('.buscarbtn').prop("disable", false).text('Pesquisar');
                 let res = xhr.responseJSON;
 
                 if (res.Result) {
@@ -33,7 +34,7 @@ $(function () {
 
                         setField.on('focus', function () {
                             $(this).css('border', '');
-                            $(this).closest('label').find('.alert').fadeOut().remove();
+                            $(this).closest('label').find('.alert').fadeOut();
                         });
                     });
                 }
@@ -49,7 +50,7 @@ $(function () {
     $('html').find('.cancelbtn').on('click', function () {
         let objLabel = $('html').find('.j_frm_busca_cep');
         objLabel.find('input').val('').css('border', '').focus();
-        objLabel.find('.alert').fadeOut().remove();
+        objLabel.find('.alert').fadeOut();
         $('html').find('.j_content_cep').fadeOut().html();
     });
 
